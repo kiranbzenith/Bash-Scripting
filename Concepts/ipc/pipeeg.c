@@ -25,19 +25,31 @@ return 1;
 if (pid > 0) { /* parent process */
 /* close the unused end of the pipe */
 close(fd[READEND]);
+printf("p1\n");
 /* write to the pipe */
 write(fd[WRITEEND], writemsg, strlen(writemsg)+1);
+
+printf("p2\n");
 /* close the WRITEEND of the pipe */
 close(fd[WRITEEND]);
+
+printf("p3\n");
 }
 else { /* child process */
 /* close the unused end of the pipe */
 close(fd[WRITEEND]);
+
+printf("c1\n");
 /* read from the pipe */
 read(fd[READEND], readmsg, BUFFERSIZE);
 printf("read %s",readmsg);
+
+printf("c2\n");
+
 /* close the WRITEEND of the pipe */
 close(fd[READEND]);
+
+printf("c3\n");
 }
 return 0;
 }
