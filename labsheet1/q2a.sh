@@ -4,7 +4,7 @@ echo "| Add       |  -a  |"
 echo "| Subtract  |  -s  |"
 echo "| Multiply  |  -m  |"
 echo "| Quotiet   |  -c  |"
-echo "| Reminder  |  -m  |"
+echo "| Reminder  |  -r  |"
 read op
 echo -n "Enter first number: "
 read a
