@@ -11,7 +11,7 @@ int main(int argc,char *argv[])
 	printf("  %d       %d\n",getppid(),getpid());
 	pid_t p2=fork();
 	if(p2!=0)
-		{	
+	{	
 			wait(NULL);
 			pid_t p3=fork();
 			if(p3!=0)
